@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UU SIS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <div class="logo">
+        <img src="logo.png" alt="Unity University Logo">
+    </div>
+    
+    
+        
+        <h1>WELCOME TO UNITY UNIVERSITY🎓</h1>
+    <h2>STUDENT INFORMATION SYSTEM</h2>
+    
+
+
+        
+ 
+
+      
+
+        <nav class="navbar">
+          <a href="#home" class="menu-home"> <br>Home</br></a>
+          <a href="https://sis.uu.edu.et/pages/academic_calender" class="menu-calendar"><br>Academic Calendar</br></a>
+          <a href="https://sis.uu.edu.et/pages/admission" class="menu-admission"><br>Online Admission</br></a>
+          <a href="https://sis.uu.edu.et/pages/official_transcript_request" class="menu-transcript">Request Official Transcript</a>
+          <a href="https://sis.uu.edu.et/pages/official_request_tracking" class="menu-tracking">Track Official Transcript</a>
+          <a href="https://sis.uu.edu.et/pages/announcement" class="menu-announcements"><br>Announcements</br></a>
+          <a href="https://sis.uu.edu.et/pages/member_registration" class="menu-registration"><br>Alumni Registration</br></a>
+          <a href="https://sis.uu.edu.et/pages/check_graduate" class="menu-graduation">Verify Student Graduation Status</br></a>
+      </nav>
+      
+
+
+        <style>
+            fieldset {
+              width: 300px;
+              margin: 0 auto;
+              text-align: left;
+              font-family: 'Times New Roman', Times, serif;
+            }
+            .error {
+              color: red;
+              margin-top: 10px;
+              display: none; /* Initially hidden */
+              text-align: center;
+            }
+          </style>
+    
+
+</head>
+
+
+<body>
+
+  
+  <div class="scroll-down">
+    <span>↓ Scroll Down ↓</span>
+</div>
+
+   
+       
+        <form action="" style="text-align: center;" onsubmit="validateLogin(event)">
+            <fieldset style="width: 300px; /* usernamu yalebet tableu full endayhon yadergewal */
+            margin: 0 auto; ">
+
+
+            <legend style="text-align: left; font-size: larger; font-family: 'Times New Roman', Times, serif;">Student Info</legend>
+            ID NUMBER:<input type="text" maxlength="12" required id="username" placeholder="Enter username UUR**"><br></br>
+            PASSWORD:<input type="password" minlength="8" maxlength="16" required id="password" placeholder="Enter password"/>
+            <br></br>
+            <label style="text-align: center;">
+              <input type="checkbox" id="rememberMe"> Remember Me
+          </label>
+          <a href="https://t.me/davidcaptain" style="display: block; margin-top: 10px;">Forgot Password?</a>
+
+      
+            <button class="login"; type="submit">Log In</button>
+            <div id="errorMessage" class="error">Ere Eyehedk Tesastekal</div>
+
+
+     
+
+
+
+
+<script>
+    const loginButton = document.getElementById('loginButton');
+    let isCredentialsIncorrect = false;
+
+    function validateLogin(event) {
+      event.preventDefault();
+
+      const defaultUsername = "dawitcaptain";
+      const defaultPassword = "password";
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username !== defaultUsername || password !== defaultPassword) {
+        const errorMessage = document.getElementById("errorMessage");
+        errorMessage.style.display = "block"; // Show error message
+        isCredentialsIncorrect = true; // Activate the "escape" behavior
+      } else {
+        alert("Login successful!");
+        window.location.href = "https://sis.uu.edu.et/";
+      }
+    }
+
+    // Make the button "run away" from the cursor
+    document.addEventListener('mousemove', (e) => {
+      if (isCredentialsIncorrect) {
+        const buttonRect = loginButton.getBoundingClientRect();
+        const distanceX = Math.abs(buttonRect.x + buttonRect.width / 2 - e.clientX);
+        const distanceY = Math.abs(buttonRect.y + buttonRect.height / 2 - e.clientY);
+
+        // Move the button if the cursor gets close
+        if (distanceX < 100 && distanceY < 50) {
+          const randomX = Math.random() * 300 - 150; // Random horizontal movement
+          const randomY = Math.random() * 100 - 50; // Random vertical movement
+          loginButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }
+      }
+    });
+  </script>
+
+
+
+
+         
+
+
+        </fieldset>
+     
+        </form>
+      
+<p>This is our Registrar Portal System for Students, Academic Staffs and Alumni to access different Registrar services offered by the office of the University’s Registrar.</p>
+<p>Copyright © 2025 Unity University </p>
+
+
+       
+</body>
+</html>

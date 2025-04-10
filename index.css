@@ -1,0 +1,237 @@
+h1{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+   
+}
+h2 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+
+
+
+body {
+    
+    background-color: antiquewhite;
+}
+
+
+
+p{
+    text-align: center;
+}
+
+
+
+
+/* Styling for the navbar */
+.navbar {
+    display: flex; /* Align navigation items horizontally */
+    gap: 40px; /* Space between links */
+    animation: slide-in 5s ease-out; /* Apply slide-in animation */
+  
+}
+
+
+
+/* Links default style */
+.navbar a {
+    text-decoration: none; /* Removes underline from links */
+    font-size: 18px;
+    color: #000000; /* Default text color */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth animation on hover */
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+/* Links hover style */
+.navbar a:hover {
+    color: rgb(0, 0, 0); /* Change text color on hover */
+    transform: scale(1.4); /* Slight enlargement on hover */
+}
+
+
+
+.menu-home {
+    background-color: #4CAF50; /* Green */
+}
+
+.menu-calendar {
+    background-color: #FF5733; /* Orange */
+}
+
+.menu-admission {
+    background-color: #33B5E5; /* Blue */
+}
+
+.menu-transcript {
+    background-color: #FFD700; /* Gold */
+}
+
+.menu-tracking {
+    background-color: #9C27B0; /* Purple */
+}
+
+.menu-announcements {
+    background-color: #FFC0CB; /* Pink */
+}
+
+.menu-registration {
+    background-color: #00C853; /* Bright Green */
+}
+
+.menu-graduation {
+    background-color: #607D8B; /* Grey */
+}
+
+.navbar a {
+    color: white; /* White text for all links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 8px 16px;
+    border-radius: 5px; /* Rounded corners */
+}
+
+.navbar a:hover {
+    filter: brightness(85%); /* Slight darkening effect on hover */
+}
+
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(-100%); /* Start offscreen above */
+        opacity: 0; /* Invisible */
+    }
+    100% {
+        transform: translateY(0); /* End in normal position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+
+.login {
+    display: block;
+    margin: 10px auto;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color change and animation */
+    border: transparent;
+    background: green;
+}
+
+.login:hover {
+    color: rgb(5, 4, 4); /* Changes text color to yellow on hover */
+    transform: translateY(-5px); /* Adds a "top-up" animation */
+    background-color: lightyellow;
+}
+
+/* logo */
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    animation: flip 5s infinite; /* Flip every 2 seconds */
+    transform-origin: center; /* Makes the flipping centered */
+}
+
+.logo {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Makes the div occupy the full height of the viewport */
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    color: #555;
+    animation: fadeBounce 2s infinite;
+}
+
+@keyframes fadeBounce {
+    0%, 100% {
+        opacity: 0.3;
+        transform: translate(-50%, 0);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -10px);
+    }
+}
+
+form {
+    background-color: antiquewh; /* Light background */
+    padding: 20px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+form input[type="text"], 
+form input[type="password"], 
+form button {
+    width: 80%; /* Full width inputs */
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #4CAF50; /* Green button */
+    color: rgb(187, 221, 36);
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+#typewriter {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    color: #4CAF50;
+    border-right: 2px solid #4CAF50; /* Simulates a cursor */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.7s infinite; /* Cursor blinking effect */
+}
+
+@keyframes blink {
+    0%, 100% {
+        border-right-color: transparent;
+    }
+    50% {
+        border-right-color: #4CAF50;
+    }
+}
+h1, h2 {
+    animation: fadeInColor 10s forwards; /* Animate over 3 seconds */
+}
+
+@keyframes fadeInColor {
+    0% {
+        color: rgb(246, 170, 19); /* Transparent at the start */
+    }
+    100% {
+        color: #000000; /* Final color */
+    }
+}
